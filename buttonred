@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Changer de couleur</title>
+    <style>
+        /* Styles de base pour la page */
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: white;
+            transition: background-color 0.5s, color 0.5s;
+        }
+
+        /* Styles du bouton */
+        button {
+            padding: 20px 40px;
+            font-size: 20px;
+            background-color: red;
+            color: white;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        /* Styles du bouton lorsqu'on appuie dessus */
+        button:active {
+            background-color: white;
+            color: red;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Le bouton -->
+    <button onclick="changerCouleur()">Cliquez-moi</button>
+
+    <script>
+        // Fonction pour changer la couleur de la page
+        function changerCouleur() {
+            document.body.style.backgroundColor = 'red';
+            document.body.style.color = 'white';
+            document.querySelector('button').style.backgroundColor = 'white';
+            document.querySelector('button').style.color = 'red';
+        }
+    </script>
+
+</body>
+</html>
